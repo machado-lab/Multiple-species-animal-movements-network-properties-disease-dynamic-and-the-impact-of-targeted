@@ -10,7 +10,7 @@ if(!require(igraph)){install.packages("igraph")};library(igraph)
 if(!require(tidyverse)){install.packages("tidyverse")};library(tidyverse)
 if(!require(SimInf)){install.packages("SimInf")};library(SimInf)
 ```
-## Creates a function to run the model and the desfragmetation of the model 
+## Creates a function to run the model and the implement control action by node removal from the network
 the following code uses the [tidyverse](https://github.com/tidyverse/tidyverse) package and uses the [SimInf](https://github.com/stewid/SimInf) framkework you can visit their repositories for more information about it.
 
 ```r
