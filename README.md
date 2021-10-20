@@ -14,7 +14,7 @@ if(!require(SimInf)){install.packages("SimInf")};library(SimInf)
 the following code uses the [tidyverse](https://github.com/tidyverse/tidyverse) package and uses the [SimInf](https://github.com/stewid/SimInf) framkework you can visit their repositories for more information about it.
 
 ```r
-nico_sier_granjas_random_fun <- function(sim.number = NA, 
+network_control_actions <- function(sim.number = NA, 
                                          rm_par, # Social network parameter to be tested 
                                          beta, #  tramission coefficient value
                                          epsilon, # incubation period if requiried 
@@ -80,7 +80,7 @@ nico_sier_granjas_random_fun <- function(sim.number = NA,
   } 
   
   
-  # creates the U0 object accoriding with the SimIinf package 
+  # Creates the U0 object accoriding with the SimIinf package 
   
   u0 <- data.frame(S = granjas$pop_total,
                    I = rep(0, nrow(granjas)),
@@ -95,7 +95,7 @@ nico_sier_granjas_random_fun <- function(sim.number = NA,
   u01<- u0
   beta <- beta
   
-  # select the farms according to the SNA parameter
+  # Select the farms according to the SNA parameter
   
   if(rm_par == "pg"){
     step_rm <- page_rank[1:nrm]
@@ -124,7 +124,7 @@ nico_sier_granjas_random_fun <- function(sim.number = NA,
                 gamma = 0,                 # The recovery rate from infected to recovered. 
                 events = events_remov)     # scheduled movements whitin farms 
   
-  # run the model 
+  # Run the model 
   result <- run(model = model1, threads = 4)  # select the number of cores in your computer
   # counting infected farms per day
   tr <- trajectory(model = result)
@@ -150,15 +150,32 @@ nico_sier_granjas_random_fun <- function(sim.number = NA,
 
 ## Set the parameters of simularion
  
+ ```r
+tspan <-as.numeric(min(events$time)):as.numeric(max(events$time))          # 0 to 1000 days of simulation  
+beta <- 0.7                                                                # tramission coefficient 
+p_anim_inf <- 0.1                                                          # within farm prevalence 
+num.simulaciones <- 100                                                    # number of stochastic simulations
+list_measures <- c( "no_control")                                          # parametes to be tested "pg" = pagerank, "dg" = degreee, 
+                                                                           # "rm" = random nodes,"btw"= betweennes, "cls" = ClusterCoefficient                                   Species <-c( "Swine", "Sheep", "Bovine", "multiespecies" )                 # species to simulate 
  ```
-tspan <-as.numeric(min(events$time)):as.numeric(max(events$time)) # 0 to 1000 days of simulation  
-beta <- 0.7 # tramission coefficient 
-p_anim_inf <- 0.1
+## Run the model 
 
-num.simulaciones <- 100           # number of stochastic simulations
-list_measures <- c( "no_control") # parametros a testar para acciones de control y vigilancia #"prdx", voy a dejar afuera TCA 
-Species <-c( "Swine", "Sheep", "Bovine", "multiespecies" )  # species to simulate 
- ```
+
+```r
+    result <- network_control_actions(rm_par = "no_control",               # selected parameter
+                                     beta= beta,                           # tramission coefficient
+                                     nrm= 1000,                            # nodes to remove
+                                     events =events,                       # echeduled events
+                                     infectados.ini = infectados.ini,      # cinitial onfected farms 
+                                     sim.number = 1,                       # id of the simulation 
+                                     granjas = population,                 # dataframe with the farm population list 
+                                     Specie.to.select = index.especie,     # specie to initiate the infection
+                                     granjas.especie= granjas.especie,     # dataframe indicating the specie
+                                     tspan = tspan)                        # period of time of the simulation
+
+```
+
+
 
 ## Authors
 
