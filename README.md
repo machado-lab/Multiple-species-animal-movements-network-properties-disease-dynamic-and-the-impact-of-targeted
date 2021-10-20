@@ -185,5 +185,8 @@ Abagael Sykes [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orci
 Francisco Paulo Nunes Lopes,
 and Gustavo Machado [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-7552-6144)
 
-
+## Citation
+Multiple species animal movements: network properties, disease dynamic and the impact of targeted control actions, 
+Nicolas C. Cardenas and Abagael L. Sykes and Francisco P. N. Lopes and Gustavo Machado, 2021, eprint:2107.10108, arXiv, q-bio.QM.
+[Preprint avaliable here!!](https://arxiv.org/abs/2107.10108?context=q-bio).
 
