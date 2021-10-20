@@ -15,16 +15,15 @@ the following code uses the [tidyverse](https://github.com/tidyverse/tidyverse) 
 
 ```r
 network_control_actions <- function(sim.number = NA, 
-                                         rm_par, # Social network parameter to be tested 
-                                         beta, #  tramission coefficient value
-                                         epsilon, # incubation period if requiried 
-                                         nrm, # Number of nodes to remove from the network 
-                                         events, # programmed events accordign with the SimInf package
-                                         infectados.ini, # Farm premises ID of the initial infected farms  
-                                         granjas, # population of all farms each line represent one farm 
-                                         Specie.to.select, # specie to initiate the infection
-                                         granjas.especie,# dataframe where each line represent one farm and the also indicating the specie 
-                                         tspan # period of the simulation 
+                                         rm_par,                #SNA parameter
+                                         beta,                  #  tramission coefficient value
+                                         nrm,                   # Number of nodes to remove from the network 
+                                         events,                # programmed events accordign with the SimInf package
+                                         infectados.ini,        # Farm premises ID of the initial infected farms  
+                                         granjas,               # population of all farms each line represent one farm 
+                                         Specie.to.select,      # specie to initiate the infection
+                                         granjas.especie,       # list of farms with the specie description c("Bovine", "Swine" etc..) 
+                                         tspan                  # period of the simulation 
 ) {
   
   # assing the object to the function 
@@ -120,7 +119,7 @@ network_control_actions <- function(sim.number = NA,
   #ahora un modelo SI ----
   model1 <- SIR(u0 = u01,                  # initial status of farms 
                 tspan = tspan,             # simulation periodf 
-                beta = beta, # The transmission rate from susceptible to Infected
+                beta = beta,               # The transmission rate from susceptible to Infected
                 gamma = 0,                 # The recovery rate from infected to recovered. 
                 events = events_remov)     # scheduled movements whitin farms 
   
@@ -163,7 +162,7 @@ list_measures <- c( "no_control")                                          # par
 
 
 ```r
-    result <- network_control_actions(rm_par = "no_control",               # selected parameter
+    result <- network_control_actions(rm_par = "no_control",               # Social network parameter to be tested 
                                      beta= beta,                           # tramission coefficient
                                      nrm= 1000,                            # nodes to remove
                                      events =events,                       # echeduled events
