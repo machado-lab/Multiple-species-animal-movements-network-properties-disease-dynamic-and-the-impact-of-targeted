@@ -4,14 +4,14 @@ Supplementary material from the manuscript **Multiple species animal movements: 
 
 > the following code is in fact in R language and is available to everyone, if you want to use please cite the manuscript preprint avaliable here [preprint avaliable here](https://arxiv.org/abs/2107.10108?context=q-bio).
 
-## load the necessary packages
+## Load the necessary packages
 ```
 if(!require(igraph)){install.packages("igraph")};library(igraph)
 if(!require(tidyverse)){install.packages("tidyverse")};library(tidyverse)
 if(!require(SimInf)){install.packages("SimInf")};library(SimInf)
 ```
 ## Creates a function to run the model and the desfragmetation of the model 
-the following code uses the tidyverse [tidyverse](https://github.com/tidyverse/tidyverse) package and uses the [SimInf](https://github.com/stewid/SimInf) framkework you can visit their repositories for more information about it.
+the following code uses the [tidyverse](https://github.com/tidyverse/tidyverse) package and uses the [SimInf](https://github.com/stewid/SimInf) framkework you can visit their repositories for more information about it.
 
 ```r
 nico_sier_granjas_random_fun <- function(sim.number = NA, 
@@ -146,5 +146,26 @@ nico_sier_granjas_random_fun <- function(sim.number = NA,
   tr$sim_number <- sim.number
   return(tr)  }
 
-
 ```
+
+## Set the parameters of simularion
+ 
+ ```
+tspan <-as.numeric(min(events$time)):as.numeric(max(events$time)) # 0 to 1000 days of simulation  
+beta <- 0.7 # tramission coefficient 
+p_anim_inf <- 0.1
+
+num.simulaciones <- 100           # number of stochastic simulations
+list_measures <- c( "no_control") # parametros a testar para acciones de control y vigilancia #"prdx", voy a dejar afuera TCA 
+Species <-c( "Swine", "Sheep", "Bovine", "multiespecies" )  # species to simulate 
+ ```
+
+## Authors
+
+Nicolas Cespedes Cardenas [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0003-4328-7171),
+Abagael Sykes [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0003-3751-1798),
+Francisco Paulo Nunes Lopes,
+and Gustavo Machado [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-7552-6144)
+
+
+
