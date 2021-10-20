@@ -156,8 +156,8 @@ beta <- 0.7                                                                # tra
 p_anim_inf <- 0.1                                                          # within farm prevalence 
 num.simulaciones <- 100                                                    # number of stochastic simulations
 list_measures <- c( "no_control")                                          # parametes to be tested "pg" = pagerank, "dg" = degreee, 
-                                                                           # "rm" = random nodes,"btw"= betweennes, "cls" = ClusterCoefficient                                   Species <-c( "Swine", "Sheep", "Bovine", "multiespecies" )                 # species to simulate 
- ```
+                                                                           # "rm" = random nodes,"btw"= betweennes, "cls" = ClusterCoefficient 
+```
 ## Run the model 
 
 
@@ -170,7 +170,7 @@ list_measures <- c( "no_control")                                          # par
                                      sim.number = 1,                       # id of the simulation 
                                      granjas = population,                 # dataframe with the farm population list 
                                      Specie.to.select = index.especie,     # specie to initiate the infection
-                                     granjas.especie= granjas.especie,     # dataframe indicating the specie
+                                     granjas.especie= granjas.especie,     # dataframe indicating the specie c( "Swine", "Sheep", "Bovine", "multiespecies")  
                                      tspan = tspan)                        # period of time of the simulation
 
 ```
