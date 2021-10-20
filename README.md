@@ -156,7 +156,8 @@ beta <- 0.7                                                                # tra
 p_anim_inf <- 0.1                                                          # within farm prevalence 
 num.simulaciones <- 100                                                    # number of stochastic simulations
 list_measures <- c( "no_control")                                          # parametes to be tested "pg" = pagerank, "dg" = degreee, 
-                                                                           # "rm" = random nodes,"btw"= betweennes, "cls" = ClusterCoefficient 
+                                                                           # "rm" = random nodes,"btw"= betweennes, 
+                                                                           # "cls" = ClusterCoefficient, "no_control" for any control action 
 ```
 ## Run the model 
 
