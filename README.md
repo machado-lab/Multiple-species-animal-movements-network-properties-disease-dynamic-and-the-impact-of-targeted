@@ -147,7 +147,7 @@ network_control_actions <- function(sim.number = NA,
 
 ```
 
-## Set the parameters of simularion
+## Set the parameters of simulation
  
  ```r
 tspan <-as.numeric(min(events$time)):as.numeric(max(events$time))          # 0 to 1000 days of simulation  
