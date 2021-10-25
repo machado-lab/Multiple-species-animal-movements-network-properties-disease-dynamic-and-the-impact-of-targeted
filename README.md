@@ -1,4 +1,4 @@
-# Multiple species animal movements: network properties, disease dynamic and theimpact of targeted control actions 
+# Multiple species animal movements: network properties, disease dynamic and the impact of targeted control actions 
 
 Supplementary material from the manuscript **Multiple species animal movements: network properties, disease dynamic and the impact of targeted control actions**.
 
