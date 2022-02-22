@@ -187,5 +187,5 @@ and Gustavo Machado [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/1
 ## Citation
 Multiple species animal movements: network properties, disease dynamic and the impact of targeted control actions, 
 Nicolas C Cardenas and Abagael L Sykes and Francisco PN Lopes and Gustavo Machado, 2021, eprint:2107.10108, arXiv, q-bio.QM.
-[Preprint avaliable here!!](https://arxiv.org/abs/2107.10108?context=q-bio).
+[Published paper here!!](https://veterinaryresearch.biomedcentral.com/articles/10.1186/s13567-022-01031-2).
 
