@@ -11,8 +11,7 @@ if(!require(tidyverse)){install.packages("tidyverse")};library(tidyverse)
 if(!require(SimInf)){install.packages("SimInf")};library(SimInf)
 ```
 ## Creates a function to run the model and the implement control action by node removal from the network
-The following code uses the [tidyverse](https://github.com/tidyverse/tidyverse) package and uses the Siminf framkework you can visit their repositories for more information about it.
-
+The following code uses the [tidyverse](https://github.com/tidyverse/tidyverse) and [data.table](https://github.com/Rdatatable/data.table) packages whithin the Siminf framkework.
 ```r
 network_control_actions <- function(sim.number = NA, 
                                          rm_par,                #SNA parameter
