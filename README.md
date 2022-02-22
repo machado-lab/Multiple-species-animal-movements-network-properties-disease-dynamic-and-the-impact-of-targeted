@@ -2,7 +2,7 @@
 
 Supplementary material from the manuscript **Multiple species animal movements: network properties, disease dynamic and the impact of targeted control actions**.
 
-> the following code is in fact in R language and is available to everyone, if you want to use please cite the manuscript preprint avaliable here [preprint avaliable here](https://arxiv.org/abs/2107.10108?context=q-bio).
+> the following code is in fact in R language and is available to everyone, if you want to use please cite the [manuscript](https://veterinaryresearch.biomedcentral.com/articles/10.1186/s13567-022-01031-2#citeas) avaliable here and the [SimInf](https://github.com/stewid/SimInf) package .
 
 ## Load the necessary packages
 ```
@@ -11,7 +11,7 @@ if(!require(tidyverse)){install.packages("tidyverse")};library(tidyverse)
 if(!require(SimInf)){install.packages("SimInf")};library(SimInf)
 ```
 ## Creates a function to run the model and the implement control action by node removal from the network
-The following code uses the [tidyverse](https://github.com/tidyverse/tidyverse) package and uses the [SimInf](https://github.com/stewid/SimInf) framkework you can visit their repositories for more information about it.
+The following code uses the [tidyverse](https://github.com/tidyverse/tidyverse) package and uses the Siminf framkework you can visit their repositories for more information about it.
 
 ```r
 network_control_actions <- function(sim.number = NA, 
@@ -185,7 +185,6 @@ Francisco PN Lopes,
 and Gustavo Machado [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-7552-6144)
 
 ## Citation
-Multiple species animal movements: network properties, disease dynamic and the impact of targeted control actions, 
-Nicolas C Cardenas and Abagael L Sykes and Francisco PN Lopes and Gustavo Machado, 2021, eprint:2107.10108, arXiv, q-bio.QM.
+Cardenas, N.C., Sykes, A.L., Lopes, F.P.N. et al. Multiple species animal movements: network properties, disease dynamics and the impact of targeted control actions. Vet Res 53, 14 (2022). https://doi.org/10.1186/s13567-022-01031-2
 [Published paper here!!](https://veterinaryresearch.biomedcentral.com/articles/10.1186/s13567-022-01031-2).
 
