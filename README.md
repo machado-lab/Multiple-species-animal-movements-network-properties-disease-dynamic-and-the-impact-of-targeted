@@ -186,5 +186,5 @@ and Gustavo Machado [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/1
 
 ## Citation
 Cardenas, N.C., Sykes, A.L., Lopes, F.P.N. et al. Multiple species animal movements: network properties, disease dynamics and the impact of targeted control actions. Vet Res 53, 14 (2022). https://doi.org/10.1186/s13567-022-01031-2
-[Published paper here!!](https://veterinaryresearch.biomedcentral.com/articles/10.1186/s13567-022-01031-2).
+
 
