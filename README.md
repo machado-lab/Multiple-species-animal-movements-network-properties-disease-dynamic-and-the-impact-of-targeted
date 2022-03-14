@@ -14,10 +14,10 @@ if(!require(SimInf)){install.packages("SimInf")};library(SimInf)
 The following code uses the [tidyverse](https://github.com/tidyverse/tidyverse) and [data.table](https://github.com/Rdatatable/data.table) packages whithin the Siminf framkework.
 ```r
 network_control_actions <- function(sim.number = NA, 
-                                         rm_par,                #SNA parameter
-                                         beta,                  #  tramission coefficient value
+                                         rm_par,                # SNA parameter
+                                         beta,                  # transmission coefficient value
                                          nrm,                   # Number of nodes to remove from the network 
-                                         events,                # programmed events accordign with the SimInf package
+                                         events,                #  events according  with the SimInf package
                                          infectados.ini,        # Farm premises ID of the initial infected farms  
                                          granjas,               # population of all farms each line represent one farm 
                                          Specie.to.select,      # specie to initiate the infection
@@ -162,10 +162,10 @@ list_measures <- c( "no_control")                                          # par
 
 ```r
     result <- network_control_actions(rm_par = "no_control",               # Social network parameter to be tested 
-                                     beta= beta,                           # tramission coefficient
+                                     beta= beta,                           # transmission coefficient
                                      nrm= 1000,                            # nodes to remove
-                                     events =events,                       # echeduled events
-                                     infectados.ini = infectados.ini,      # cinitial onfected farms 
+                                     events =events,                       # scheduled events
+                                     infectados.ini = infectados.ini,      # initial onfected farms 
                                      sim.number = 1,                       # id of the simulation 
                                      granjas = population,                 # dataframe with the farm population list 
                                      Specie.to.select = index.especie,     # specie to initiate the infection
